@@ -22,8 +22,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//  rutas servicios
-// rutas de servicios
+
+// rutas servicios
 Route::get('/servicios', [App\Http\Controllers\ServicesController::class, 'index']);
 
 Route::get('/servicios/create', [App\Http\Controllers\ServicesController::class, 'create']);
@@ -32,3 +32,14 @@ Route::post('/servicios', [App\Http\Controllers\ServicesController::class, 'send
 
 Route::put('/servicios/{services}', [App\Http\Controllers\ServicesController::class, 'update']);
 Route::delete('/servicios/{services}', [App\Http\Controllers\ServicesController::class, 'destroy']);
+
+
+// ruta campus
+Route::get('/sedes', [App\Http\Controllers\CampusController ::class, 'index']);
+
+Route::get('/sedes/create', [App\Http\Controllers\CampusController::class, 'create']);
+Route::get('/sedes/¨{campuses}/edit', [App\Http\Controllers\CampusController::class, 'edit']);
+Route::post('/sedes', [App\Http\Controllers\CampusController::class, 'sendData']);
+
+Route::put('/sedes/{campuses}', [App\Http\Controllers\CampusController::class, 'update']);
+Route::delete('/sedes/{campuses}', [App\Http\Controllers\CampusController::class, 'destroy']);

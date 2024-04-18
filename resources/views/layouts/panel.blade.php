@@ -123,7 +123,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./examples/maps.html">
+            <a class="nav-link " href="{{ url ('/sedes')}}">
               <i class="fas fa-building text-pink"></i> Sede
             </a>  
           </li>
